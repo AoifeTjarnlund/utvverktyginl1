@@ -11,6 +11,7 @@ public class Guesser{
   private int low;
   private int high;
 
+  }
   /*
    * Task 1. Write code here for a constructor
    * which takes two int arguments and saves
@@ -23,7 +24,11 @@ public class Guesser{
    */
   
   // Write the constructor below this line.
-
+  public Guesser(int low, int high) {
+	  self.low = low;
+	  self.high = high;
+  }
+  
 
   /*
    * Task 2. Complete the start() method, so that
@@ -33,6 +38,8 @@ public class Guesser{
   public void start(){
     // call the rules method here
     // call the doGuesses() method here
+	  self.rules();
+	  self.doGuesses();
   }
 
   private void rules(){
@@ -53,8 +60,10 @@ public class Guesser{
    * a valid reply. Return the String that you read from
    * the player.
    */
+  
   private String getReply(){
-    String reply = null;
+    Scanner scanner = new Scanner(system.In);
+	  String reply = null;
     // Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.

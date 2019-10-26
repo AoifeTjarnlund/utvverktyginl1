@@ -1,4 +1,5 @@
-import java.io.Console;
+ import java.io.Console;
+import java.util.Scanner;
 
 /**
  * Assignment 1 - Guessing Game
@@ -11,7 +12,6 @@ public class Guesser{
   private int low;
   private int high;
 
-  }
   /*
    * Task 1. Write code here for a constructor
    * which takes two int arguments and saves
@@ -22,13 +22,11 @@ public class Guesser{
    * and review the section about constructors.
    *
    */
-  
   // Write the constructor below this line.
   public Guesser(int low, int high) {
-	  self.low = low;
-	  self.high = high;
+	  this.low = low;
+	  this.high = high;
   }
-  
 
   /*
    * Task 2. Complete the start() method, so that
@@ -38,8 +36,8 @@ public class Guesser{
   public void start(){
     // call the rules method here
     // call the doGuesses() method here
-	  self.rules();
-	  self.doGuesses();
+	  this.rules();
+	  this.doGuesses();
   }
 
   private void rules(){
@@ -62,8 +60,14 @@ public class Guesser{
    */
   
   private String getReply(){
-    Scanner scanner = new Scanner(system.In);
-	  String reply = null;
+    Scanner scanner = new Scanner(System.in);
+    
+	  String reply = scanner.next();
+	  
+	  if (reply.equals("T") || reply.equals("F"));
+	  else
+		  System.out.println("Error! Please answer with T for true or F for false.\n");
+	  
     // Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
@@ -106,3 +110,4 @@ public class Guesser{
   }
 
 }
+
